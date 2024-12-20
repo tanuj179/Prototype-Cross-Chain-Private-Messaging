@@ -1,41 +1,136 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Cross-Chain Private Messaging Protocol Prototype
 
-## Getting Started
+This project is a simplified prototype of a Cross-Chain Private Messaging Protocol using Next.js and React.
 
-First, run the development server:
+Prerequisites:
+- Node.js (version 14 or later)
+- npm (usually comes with Node.js)
+- Git
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Cloning and Setting Up the Project:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Clone the repository:
+   git clone https://github.com/your-username/cross-chain-messaging-prototype.git
+   cd cross-chain-messaging-prototype
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. Install dependencies:
+   npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   This will install all necessary dependencies, including:
+   - next
+   - react
+   - react-dom
+   - @radix-ui/react-label
+   - @radix-ui/react-slot
+   - class-variance-authority
+   - clsx
+   - tailwind-merge
+   - tailwindcss-animate
 
-## Learn More
+3. If any dependencies are missing, install them manually:
+   npm install @radix-ui/react-label @radix-ui/react-slot class-variance-authority clsx tailwind-merge tailwindcss-animate
 
-To learn more about Next.js, take a look at the following resources:
+4. Ensure your package.json file includes the following scripts:
+   {
+     "scripts": {
+       "dev": "next dev",
+       "build": "next build",
+       "start": "next start",
+       "lint": "next lint"
+     }
+   }
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. Create a tailwind.config.js file in the root directory with the following content:
+   /** @type {import('tailwindcss').Config} */
+   module.exports = {
+     darkMode: ["class"],
+     content: [
+       './pages/**/*.{ts,tsx}',
+       './components/**/*.{ts,tsx}',
+       './app/**/*.{ts,tsx}',
+       './src/**/*.{ts,tsx}',
+     ],
+     theme: {
+       // ... (rest of the Tailwind configuration)
+     },
+     plugins: [require("tailwindcss-animate")],
+   }
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+6. Create a tsconfig.json file in the root directory with the following content:
+   {
+     "compilerOptions": {
+       "target": "es5",
+       "lib": ["dom", "dom.iterable", "esnext"],
+       "allowJs": true,
+       "skipLibCheck": true,
+       "strict": true,
+       "forceConsistentCasingInFileNames": true,
+       "noEmit": true,
+       "esModuleInterop": true,
+       "module": "esnext",
+       "moduleResolution": "node",
+       "resolveJsonModule": true,
+       "isolatedModules": true,
+       "jsx": "preserve",
+       "incremental": true,
+       "plugins": [
+         {
+           "name": "next"
+         }
+       ],
+       "paths": {
+         "@/*": ["./*"]
+       }
+     },
+     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+     "exclude": ["node_modules"]
+   }
 
-## Deploy on Vercel
+7. Ensure you have a next.config.js file in the root directory with the following content:
+   /** @type {import('next').NextConfig} */
+   const nextConfig = {}
+   
+   module.exports = nextConfig
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Running the Project:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# Prototype-Cross-Chain-Private-Messaging
-Build a Cross-Chain Private Messaging System where users can send encrypted messages using their wallet addresses as identities.
->>>>>>> 0c809c855a4b30719cc4d46b595d4b219ecc70c8
+1. Start the development server:
+   npm run dev
+
+2. Open your browser and navigate to http://localhost:3000
+
+3. You should now see the Cross-Chain Private Messaging Protocol prototype running in your browser.
+
+Troubleshooting:
+
+If you encounter any issues:
+
+1. Ensure all dependencies are installed correctly:
+   npm install
+
+2. Clear the Next.js cache:
+   rm -rf .next
+
+3. Rebuild the project:
+   npm run build
+
+4. If you're still experiencing issues, try deleting the node_modules folder and reinstalling dependencies:
+   rm -rf node_modules
+   npm install
+
+Project Structure:
+
+- app/: Contains the main application code
+  - components/: React components used in the application
+  - page.tsx: Main page component
+  - layout.tsx: Root layout component
+- components/ui/: Reusable UI components
+- lib/: Utility functions
+
+Contributing:
+
+If you'd like to contribute to this project, please fork the repository and create a pull request with your changes.
+
+License:
+
+This project is open source and available under the MIT License.
