@@ -1,0 +1,36 @@
+{
+  "name": "cross-chain-messaging-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "resolutions": {
+    "eslint": "^8.0.0"
+  },
+  "dependencies": {
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@types/node": "20.3.1",
+    "@types/react": "18.2.12",
+    "@types/react-dom": "18.2.5",
+    "autoprefixer": "^10.4.20",
+    "class-variance-authority": "^0.6.0",
+    "clsx": "^1.2.1",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^15.1.2",
+    "glob": "^11.0.0",
+    "next": "^15.1.2",
+    "postcss": "^8.4.49",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "rimraf": "^6.0.1",
+    "tailwind-merge": "^1.13.2",
+    "tailwindcss": "^3.4.17",
+    "tailwindcss-animate": "^1.0.6",
+    "typescript": "5.1.3"
+  }
+}
