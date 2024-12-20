@@ -10,7 +10,7 @@ Prerequisites:
 Cloning and Setting Up the Project:
 
 1. Clone the repository:
-   git clone https://github.com/your-username/cross-chain-messaging-prototype.git
+   git clone https://github.com/tanuj179/Prototype-Cross-Chain-Private-Messaging.git
    cd cross-chain-messaging-prototype
 
 2. Install dependencies:
